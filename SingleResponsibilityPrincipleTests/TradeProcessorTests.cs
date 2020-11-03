@@ -67,7 +67,7 @@ namespace SingleResponsibilityPrinciple.Tests
             tradeProcessor.ProcessTrades(tradeStream);
             int endCount = CountDbRecords();
             // Assert
-            Assert.AreEqual(endCount - startCount, 4);
+            Assert.AreEqual(4, endCount - startCount);
         }
 
         [TestMethod]
@@ -81,7 +81,7 @@ namespace SingleResponsibilityPrinciple.Tests
             tradeProcessor.ProcessTrades(tradeStream);
             int endCount = CountDbRecords();
             // Assert
-            Assert.AreEqual(endCount - startCount, 0);
+            Assert.AreEqual(0, endCount - startCount);
         }
 
         [TestMethod]
@@ -95,7 +95,7 @@ namespace SingleResponsibilityPrinciple.Tests
             tradeProcessor.ProcessTrades(tradeStream);
             int endCount = CountDbRecords();
             // Assert
-            Assert.AreEqual(endCount - startCount, 2);
+            Assert.AreEqual(2, endCount - startCount);
         }
 
     }
