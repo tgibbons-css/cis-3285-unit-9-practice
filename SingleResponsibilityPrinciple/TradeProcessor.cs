@@ -11,7 +11,7 @@ namespace SingleResponsibilityPrinciple
 {
     public class TradeProcessor
     {
-        const float LotSize = 100000f;
+
 
         /// <summary>
         /// Read the text file containing the trades. This file should in in the format of one trade per line
@@ -77,6 +77,8 @@ namespace SingleResponsibilityPrinciple
         /// <returns> A TradeRecord object containing the trade data</returns>
         private TradeRecord MapTradeDataToTradeRecord(String[] fields)
         {
+            const float LotSize = 100000f;
+
             string sourceCurrencyCode = fields[0].Substring(0, 3);
             string destinationCurrencyCode = fields[0].Substring(3, 3);
             int tradeAmount = int.Parse(fields[1]);
